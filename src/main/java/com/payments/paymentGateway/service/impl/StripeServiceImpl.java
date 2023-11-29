@@ -42,6 +42,7 @@ public class StripeServiceImpl implements StripeService {
                 .setDescription("Charge for jenny.rosen@example.com")
                 .build();
         PaymentIntent paymentIntent = PaymentIntent.create(params);
+        String clientScret= paymentIntent.getClientSecret();
 
 //        Map<String, Object> params = new HashMap<>();
 //        params.put("amount", 2000);

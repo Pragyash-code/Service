@@ -32,13 +32,13 @@ public class StripeController {
 //        return new CreatePaymentResponse(intent.getClientSecret());
 //    }
 
-    @CrossOrigin
-    @GetMapping("/config")
-    public Map<String, String> getConfig() {
-        Map<String, String> config = new HashMap<>();
-        config.put("publishableKey", System.getenv("pk_test_51OAlGCSBqoRk66YBFJDYfsxMz284PgeIAl9WgNHMlEIChBZX7DoHVrrGwAEu3nqqql5vQfg7dSGkHosD0WqahxMR00kLy07i6z"));
-        return config;
-    }
+//    @CrossOrigin
+//    @GetMapping("/config")
+//    public Map<String, String> getConfig() {
+//        Map<String, String> config = new HashMap<>();
+//        config.put("publishableKey", System.getenv("pk_test_51OAlGCSBqoRk66YBFJDYfsxMz284PgeIAl9WgNHMlEIChBZX7DoHVrrGwAEu3nqqql5vQfg7dSGkHosD0WqahxMR00kLy07i6z"));
+//        return config;
+//    }
 
     @PostMapping("/card/token")
     public PaymentIntent createCardToken(@RequestBody StripeTokenDTO model) throws StripeException {
